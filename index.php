@@ -6,6 +6,7 @@ if (isset($_POST['submit'])) {
 
     $sql="insert into 'agendadb' (nombre,celular)
     values('$nombre','$celular')";
+    
     $result=mysqli_query($con,$sql);
     if ($result) {
         echo "Data ingresada correctamente";

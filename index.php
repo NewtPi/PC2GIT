@@ -1,5 +1,5 @@
 <?php
-include 'conectar-php';
+include 'connect.php';
 if (isset($_POST['submit'])) {
     $nombre=$_POST['nombre'];
     $celular=$_POST['celular'];
@@ -9,6 +9,8 @@ if (isset($_POST['submit'])) {
     $result=mysqli_query($con,$sql);
     if ($result) {
         echo "Data ingresada correctamente";
+    }else {
+        die(mysqli_error($con))
     }
 }
 ?>

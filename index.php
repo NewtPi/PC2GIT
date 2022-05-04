@@ -1,9 +1,19 @@
 <?php
 include 'conectar-php';
+if (isset($_POST['submit'])) {
+    $nombre=$_POST['nombre'];
+    $celular=$_POST['celular'];
 
+    $sql="insert into 'agendadb' (nombre,celular)
+    values('nombre','celular')";
+    $result=mysqli_query($con,$sql);
+    if ($result) {
+        echo "Data ingresada correctamente";
+    }
+}
 ?>
 
-<!DOCTYPE html>
+
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -32,8 +42,6 @@ include 'conectar-php';
             <div class="container my-5">
             
             <form method="post">
-
-            <form>
 
             <div class="mb-3">
                 <label >Nombre</label>

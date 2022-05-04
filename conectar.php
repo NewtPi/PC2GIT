@@ -8,23 +8,11 @@
     $active_group = 'default';
     $query_builder = TRUE;
     // Connect to DB
-    $conn = mysqli_connect($cleardb_server, $cleardb_username, $cleardb_password, $cleardb_db);
+    $con = mysqli_connect($cleardb_server, $cleardb_username, $cleardb_password, $cleardb_db);
 
-    if($conn){
+    if($con){
         echo "SE CONECTOOOO";
         
-    }
-
-    if (isset($_POST['submit'])) {
-        $nombre=$_POST['nombre'];
-        $celular=$_POST['celular'];
-
-        $sql="insert into 'agendadb' (nombre,celular)
-        values('$nombre', '$celular') ";
-        $result=mysqli_query($conn,$sql)
-        if ($result) {
-            echo "DATA INGRESADA CORRECTAMENTE";
-        }
     }
 
 

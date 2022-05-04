@@ -13,7 +13,7 @@ include 'connect.php';
 </head>
 <body>
 
-<       !doctype html>
+
         <html lang="en">
             
         <head>

@@ -1,6 +1,18 @@
 <?php
-include 'conectar.php';
+include 'connect.php';
+if (isset($_POST['submit'])) {
+    $nombre=$_POST['nombre'];
+    $celular=$_POST['celular'];
 
+    $sql="insert into 'agendadb' (nombre,celular)
+    values('nombre','celular')";
+    $result=mysqli_query($con,$sql);
+    if ($result) {
+        echo "Data ingresada correctamente";
+    }else {
+        die(mysqli_error($con))
+    }
+}
 ?>
 
 
@@ -40,7 +52,7 @@ include 'conectar.php';
 
             <div class="mb-3">
                 <label >Celular</label>
-                <input type="celular" class="form-control"
+                <input type="text" class="form-control"
                 placeholder="Escribe el número de telefono" name="celular" autocomplete="off">
             </div>
 

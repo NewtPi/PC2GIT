@@ -1,16 +1,3 @@
-
-
-
-
-
-
-
-
-
-
-
-
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -119,7 +106,17 @@
         
     }
 
+    if (isset($_POST['submit'])) {
+        $nombre=$_POST['nombre'];
+        $celular=$_POST['celular'];
 
+        $sql="insert into 'agendadb' (nombre,celular)
+        values('$nombre', '$celular') ";
+        $result=mysqli_query($conn,$sql)
+        if ($result) {
+            echo "DATA INGRESADA CORRECTAMENTE";
+        }
+    }
 
 
 

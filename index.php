@@ -1,3 +1,47 @@
+<?php
+    //Get Heroku ClearDB connection information
+    $cleardb_url = parse_url(getenv("CLEARDB_DATABASE_URL"));
+    $cleardb_server = $cleardb_url["host"];
+    $cleardb_username = $cleardb_url["user"];
+    $cleardb_password = $cleardb_url["pass"];
+    $cleardb_db = substr($cleardb_url["path"],1);
+    $active_group = 'default';
+    $query_builder = TRUE;
+    // Connect to DB
+    $conn = mysqli_connect($cleardb_server, $cleardb_username, $cleardb_password, $cleardb_db);
+
+    if($conn){
+        echo "SE CONECTOOOO";
+        
+    }
+
+    if (isset($_POST['submit'])) {
+        $nombre=$_POST['nombre'];
+        $celular=$_POST['celular'];
+
+        $sql="insert into 'agendadb' (nombre,celular)
+        values('$nombre', '$celular') ";
+        $result=mysqli_query($conn,$sql)
+        if ($result) {
+            echo "DATA INGRESADA CORRECTAMENTE";
+        }
+    }
+
+
+
+?>
+
+
+
+
+
+
+
+
+
+
+
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -7,9 +51,10 @@
     <title>Document</title>
 </head>
 <body>
-        
-        <!doctype html>
+
+<       !doctype html>
         <html lang="en">
+            
         <head>
             <!-- Required meta tags -->
             <meta charset="utf-8">
@@ -21,30 +66,35 @@
             <title>AGENDA DE CONTACTOS</title>
         </head>
         <body>
-            <div class="container">
+            <h1> AGENDA DE CONTACTOS </h1>    
+
+            <div class="container my-5">
+            
+            <form method="post">
+
             <form>
+
             <div class="mb-3">
-                <label for="exampleInputEmail1" class="form-label">Email address</label>
-                <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
-                <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div>
+                <label >Nombre</label>
+                <input type="text" class="form-control"
+                placeholder="Escribe el nombre" name="nombre" autocomplete="off">
             </div>
+
             <div class="mb-3">
-                <label for="exampleInputPassword1" class="form-label">Password</label>
-                <input type="password" class="form-control" id="exampleInputPassword1">
+                <label >Celular</label>
+                <input type="celular" class="form-control"
+                placeholder="Escribe el número de telefono" name="celular" autocomplete="off">
             </div>
-            <div class="mb-3 form-check">
-                <input type="checkbox" class="form-check-input" id="exampleCheck1">
-                <label class="form-check-label" for="exampleCheck1">Check me out</label>
-            </div>
-            <button type="submit" class="btn btn-primary">Submit</button>
+
+
+            <button type="submit" class="btn btn-primary" name="submit">Guardar contacto</button>
+            
             </form>
-            
+
             </div>
-            
         
         </body>
         </html>
-
 
 
 
@@ -83,23 +133,7 @@
 
 
 
-        <?php
-            //Get Heroku ClearDB connection information
-            $cleardb_url = parse_url(getenv("CLEARDB_DATABASE_URL"));
-            $cleardb_server = $cleardb_url["host"];
-            $cleardb_username = $cleardb_url["user"];
-            $cleardb_password = $cleardb_url["pass"];
-            $cleardb_db = substr($cleardb_url["path"],1);
-            $active_group = 'default';
-            $query_builder = TRUE;
-            // Connect to DB
-            $conn = mysqli_connect($cleardb_server, $cleardb_username, $cleardb_password, $cleardb_db);
 
-            if($conn){
-                echo "SE CONECTOOOO";
-                
-            }
-        ?>
 
 
 

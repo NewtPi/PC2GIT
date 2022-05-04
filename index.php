@@ -5,7 +5,7 @@ if (isset($_POST['submit'])) {
     $celular=$_POST['celular'];
 
     $sql="insert into 'agendadb' (nombre,celular)
-    values('nombre','celular')";
+    values('$nombre','$celular')";
     $result=mysqli_query($con,$sql);
     if ($result) {
         echo "Data ingresada correctamente";

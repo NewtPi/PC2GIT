@@ -1,18 +1,6 @@
 <?php
 include 'connect.php';
-if (isset($_POST['submit'])) {
-    $nombre=$_POST['nombre'];
-    $celular=$_POST['celular'];
 
-    $sql="insert into 'agendadb' (nombre,celular)
-    values('nombre','celular')";
-    $result=mysqli_query($con,$sql);
-    if ($result) {
-        echo "Data ingresada correctamente";
-    }else {
-        die(mysqli_error($con))
-    }
-}
 ?>
 
 

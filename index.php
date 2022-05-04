@@ -1,5 +1,5 @@
 <?php
-include 'connect.php';
+include 'conectar.php';
 
 ?>
 
@@ -12,7 +12,6 @@ include 'connect.php';
     <title>Document</title>
 </head>
 <body>
-
 
         <html lang="en">
             

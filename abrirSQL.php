@@ -1,3 +1,7 @@
+<head>
+    <title>BIENVENIDO A SU AGENDA DE CONTACTOS</title>
+</head>
+
 <form action="index.php" method="POST">
 
     <button type="submit" name="regresar">Regresar a añadir contactos</button>

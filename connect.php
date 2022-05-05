@@ -5,5 +5,5 @@ if($con){
     echo "SE CONECTOOOO";
 }
 
-
+header("Location: index.php?signup=sucess");
 ?>

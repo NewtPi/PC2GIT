@@ -7,6 +7,7 @@
 
 <body>
 <h1>BIENVENIDO</h1>
+<h2>Añada o vea sus contactos</h2>
 
 <form action="nuevocontacto.php" method="POST" autocomplete="off">
     <input type="text" name="nombre" placeholder="Ingrese el nombre completo">;

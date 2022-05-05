@@ -6,6 +6,7 @@
 </head>
 
 <body>
+<h1>BIENVENIDO</h1>
 
 <form action="nuevocontacto.php" method="POST" autocomplete="off">
     <input type="text" name="nombre" placeholder="Ingrese el nombre completo">;

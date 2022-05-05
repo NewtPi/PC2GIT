@@ -17,7 +17,9 @@ $result=mysqli_query($conn, $sql);
 
 
 <body>
-<h1>BIENVENIDO A SU AGENDA DE CONTACTOS</h1>
+
+<h1>AGENDA</h1>
+
 <table class="table">
   <thead>
     <tr>

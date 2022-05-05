@@ -10,7 +10,7 @@ mysqli_query($conn, $sql);
 
 
 
-if($con){
+if($conn){
     echo "SE CONECTOOOO";
 }
 

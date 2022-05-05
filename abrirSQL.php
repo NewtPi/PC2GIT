@@ -1,14 +1,19 @@
 <?php
 $conn=new mysqli('us-cdbr-east-05.cleardb.net','bbe40a4158d781','bad350f8','heroku_05ba08bf857ea97');
 
-$sql= "Select * from agendadb";
-$result=mysqli_query($conn,$sql);
-if ($result) {
-    $row=mysqli_fetch_assoc($result);
-    echo row['nombre'];
-    $row=mysqli_fetch_assoc($result);
-    echo row['celular'];
-}
+<form action="index.php" method="POST">
+
+    <button type="submit" name="regresar">Regresar a añadir contactos</button>
+
+</form>
+//$sql= "Select * from agendadb";
+//$result=mysqli_query($conn,$sql);
+//if ($result) {
+//    $row=mysqli_fetch_assoc($result);
+//    echo row['nombre'];
+//    $row=mysqli_fetch_assoc($result);
+//    echo row['celular'];
+//}
 ?>
 
 <table class="table">
@@ -40,3 +45,5 @@ if ($result) {
             </tr>
         </tbody>
         </table>
+
+        

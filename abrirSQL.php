@@ -10,20 +10,7 @@ $conn=new mysqli('us-cdbr-east-05.cleardb.net','bbe40a4158d781','bad350f8','hero
 $sql="SELECT ID, nombre, celular FROM agendadb";
 $result=mysqli_query($conn, $sql);
 
-if ($result) {
-    while ($row=mysqli_fetch_assoc($result)) {
-        $ID=$row['ID'];
-        $nombre=$row['nombre'];
-        $celular=$row['celular'];
-        echo ' <tr>
-        <th scope="row">'.$ID.'</th>
-        <td>'.$nombre.'</td>
-        <td>'.$celular.'</td>
-      </tr>';
 
-
-        }
-}
 
 
 
@@ -47,26 +34,27 @@ if ($result->num_rows > 0) {
       <th scope="col">#</th>
       <th scope="col">Nombre</th>
       <th scope="col">Celular</th>
-      <th scope="col">Handle</th>
     </tr>
   </thead>
   <tbody>
-    <tr>
-      <th scope="row">1</th>
-      <td>Mark</td>
-      <td>Otto</td>
-      <td>@mdo</td>
-    </tr>
-    <tr>
-      <th scope="row">2</th>
-      <td>Jacob</td>
-      <td>Thornton</td>
-      <td>@fat</td>
-    </tr>
-    <tr>
-      <th scope="row">3</th>
-      <td colspan="2">Larry the Bird</td>
-      <td>@twitter</td>
-    </tr>
-  </tbody>
-</table>
+
+<?php
+if ($result) {
+    while ($row=mysqli_fetch_assoc($result)) {
+        $ID=$row['ID'];
+        $nombre=$row['nombre'];
+        $celular=$row['celular'];
+        echo ' <tr>
+        <th scope="row">'.$ID.'</th>
+        <td>'.$nombre.'</td>
+        <td>'.$celular.'</td>
+      </tr>';
+
+
+        }
+}
+
+
+?>
+
+

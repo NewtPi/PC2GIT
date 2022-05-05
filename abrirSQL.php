@@ -28,7 +28,6 @@ if ($result) {
         $nombre=$row['nombre'];
         $celular=$row['celular'];
         echo ' <tr>
-        <th scope="row">'.$ID.'</th>
         <td>'.$nombre.'</td>
         <td>'.$celular.'</td>
       </tr>';

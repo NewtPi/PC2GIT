@@ -8,7 +8,7 @@
 
 <body>
 
-<form action="connect.php" method="POST">
+<form action="abrirSQL.php" method="POST">
     <input type="text" name="nombre" placeholder="Ingrese el nombre completo">;
 
     <input type="number" name="celular" placeholder="Ingrese el numero de celular">;
@@ -17,16 +17,10 @@
 
 </form>
 
+<?php
 
 
-
-
-
-
-
-
-
-
+?>
 
 <table class="table">
         <thead>

@@ -10,7 +10,7 @@ $conn=new mysqli('us-cdbr-east-05.cleardb.net','bbe40a4158d781','bad350f8','hero
 
 <body>
 
-<form action="abrirSQL.php" method="POST">
+<form action="nuevocontacto.php" method="POST">
     <input type="text" name="nombre" placeholder="Ingrese el nombre completo">;
 
     <input type="number" name="celular" placeholder="Ingrese el numero de celular">;

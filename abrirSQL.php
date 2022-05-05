@@ -4,11 +4,11 @@ $conn=new mysqli('us-cdbr-east-05.cleardb.net','bbe40a4158d781','bad350f8','hero
 $sql="SELECT nombre, celular FROM agendadb";
 $result=mysqli_query($conn, $sql);
 
-echo "Nombre: " . "  " . " - Celular: " ." ". "<br>";
+echo "Nombre: " . "          " . "Celular: " ." ". "<br>";
 if ($result->num_rows > 0) {
     // output data of each row
     while($row = $result->fetch_assoc()) {
-      echo $row["nombre"]. "  " . $row["celular"]. " ". "<br>";
+      echo $row["nombre"]. "          " . $row["celular"]. " ". "<br>";
     }
   } else {
     echo "0 results";

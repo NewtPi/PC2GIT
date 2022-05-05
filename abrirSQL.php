@@ -11,20 +11,12 @@ $sql="SELECT ID, nombre, celular FROM agendadb";
 $result=mysqli_query($conn, $sql);
 
 
-echo "Nombre: " . " " ." " ." " ." " ." " . "Celular: " ." ". "<br>";
-if ($result->num_rows > 0) {
-    // output data of each row
-    while($row = $result->fetch_assoc()) {
-      echo $row["nombre"]." " ." " ." " ." " ." " . $row["celular"]. " ". "<br>";
-    }
-  } else {
-    echo "0 results";
-  }
+
 
 
 ?>
 
-
+<body>
 <table class="table">
   <thead>
     <tr>
@@ -54,4 +46,5 @@ if ($result) {
 
 ?>
 
+</body>
 

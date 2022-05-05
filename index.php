@@ -17,10 +17,4 @@
 
 </form>
 
-
-<?php
-    $sql="INSERT INTO agendadb (nombre, celular) VALUES ('nombre','celular')";
-    mysqli_query($conn, $sql);
-?>
-
 </body>

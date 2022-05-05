@@ -11,9 +11,6 @@ $sql="SELECT ID, nombre, celular FROM agendadb";
 $result=mysqli_query($conn, $sql);
 
 
-
-
-
 echo "Nombre: " . " " ." " ." " ." " ." " . "Celular: " ." ". "<br>";
 if ($result->num_rows > 0) {
     // output data of each row
@@ -23,7 +20,6 @@ if ($result->num_rows > 0) {
   } else {
     echo "0 results";
   }
-  $conn->close();
 
 ?>
 

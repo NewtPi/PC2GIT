@@ -7,7 +7,7 @@
 
 <body>
 
-<form action="nuevocontacto.php" method="POST">
+<form action="nuevocontacto.php" method="POST" autocomplete="off">
     <input type="text" name="nombre" placeholder="Ingrese el nombre completo">;
 
     <input type="number" name="celular" placeholder="Ingrese el numero de celular">;
@@ -21,11 +21,5 @@
     <button type="submit" name="veragenda">Ver agenda</button>
 
 </form>
-
-
-
-
-
-
 
 </body>

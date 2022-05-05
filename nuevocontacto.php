@@ -10,10 +10,4 @@ $celular=$_POST['celular'];
 $sql="INSERT INTO agendadb (nombre, celular) VALUES ('$nombre','$celular')";
 mysqli_query($conn, $sql);
 
-
-
-if($conn){
-    echo "SE CONECTOOOO";
-}
-
 ?>

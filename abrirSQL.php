@@ -7,20 +7,15 @@
 <?php
 $conn=new mysqli('us-cdbr-east-05.cleardb.net','bbe40a4158d781','bad350f8','heroku_05ba08bf857ea97');
 
-$sql="SELECT ID, nombre, celular FROM agendadb";
+$sql="SELECT nombre, celular FROM agendadb";
 $result=mysqli_query($conn, $sql);
-
-
-
-
-
 ?>
+
 
 <body>
 <table class="table">
   <thead>
     <tr>
-      <th scope="col">#</th>
       <th scope="col">Nombre</th>
       <th scope="col">Celular</th>
     </tr>
@@ -30,7 +25,6 @@ $result=mysqli_query($conn, $sql);
 <?php
 if ($result) {
     while ($row=mysqli_fetch_assoc($result)) {
-        $ID=$row['ID'];
         $nombre=$row['nombre'];
         $celular=$row['celular'];
         echo ' <tr>
@@ -38,12 +32,8 @@ if ($result) {
         <td>'.$nombre.'</td>
         <td>'.$celular.'</td>
       </tr>';
-
-
         }
 }
-
-
 ?>
 
 </body>

@@ -3,6 +3,7 @@ $con=new mysqli('us-cdbr-east-05.cleardb.net','bbe40a4158d781','bad350f8','herok
 
 if($con){
     echo "SE CONECTOOOO";
-    
 }
+
+header("Location: index.php?signup=sucess");
 ?>

@@ -2,12 +2,12 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>AGREGUE SU CONTACTO</title>
+    <title>AGREGUE UN ESTUDIANTE</title>
 </head>
 
 <body>
 <h1>BIENVENIDO</h1>
-<h2>Añada o vea sus contactos</h2>
+<h2>Añada o vea los estudiantes</h2>
 
 <form action="nuevocontacto.php" method="POST" autocomplete="off">
     <input type="text" name="nombre" placeholder="Ingrese el nombre completo">;

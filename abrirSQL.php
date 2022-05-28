@@ -25,7 +25,7 @@ $result=mysqli_query($conn, $sql);
     <tr>
       <th scope="col">Nombre</th>
       <th scope="col">Codigo</th>
-      <th scope="col">Universidad</th>
+      <th scope="col">Rank universidad</th>
       <th scope="col">Celular</th>
       <th scope="col">Ciclo</th>
     </tr>

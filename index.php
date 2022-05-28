@@ -10,9 +10,9 @@
 <h2>Añada o vea los estudiantes</h2>
 
 <form action="nuevocontacto.php" method="POST" autocomplete="off">
-    <input type="text" name="nombre" placeholder="Ingrese el nombre completo">;
+    <input type="text" name="nombre" placeholder="Ingrese el nombre">;
 
-    <input type="number" name="celular" placeholder="Ingrese el numero de celular">;
+    <input type="number" name="codigo" placeholder="Ingrese el codigo">;
 
     <button type="submit" name="submit">Guardar contacto</button>
 

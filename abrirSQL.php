@@ -24,7 +24,7 @@ $result=mysqli_query($conn, $sql);
   <thead>
     <tr>
       <th scope="col">Nombre</th>
-      <th scope="col">Celular</th>
+      <th scope="col">Codigo</th>
     </tr>
   </thead>
   <tbody>
@@ -33,10 +33,10 @@ $result=mysqli_query($conn, $sql);
 if ($result) {
     while ($row=mysqli_fetch_assoc($result)) {
         $nombre=$row['nombre'];
-        $celular=$row['celular'];
+        $codigo=$row['codigo'];
         echo ' <tr>
         <td>'.$nombre.'</td>
-        <td>'.$celular.'</td>
+        <td>'.$codigo.'</td>
       </tr>';
         }
 }

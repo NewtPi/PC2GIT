@@ -5,9 +5,9 @@ header("Location: index.php?signup=sucess");
 
 
 $nombre=$_POST['nombre'];
-$celular=$_POST['celular'];
+$codigo=$_POST['codigo'];
 
-$sql="INSERT INTO agendadb (nombre, celular) VALUES ('$nombre','$celular')";
+$sql="INSERT INTO agendadb (nombre, codigo) VALUES ('$nombre','$codigo')";
 mysqli_query($conn, $sql);
 
 ?>
